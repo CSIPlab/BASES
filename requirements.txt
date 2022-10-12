@@ -1,0 +1,6 @@
+torch==1.11.0 
+torchvision==0.12.0
+mmcv-full==1.5.1
+numpy==1.21.2
+matplotlib==3.5.1
+tqdm==4.62.3
