@@ -1,6 +1,6 @@
 # BASES: Blackbox Attacks via Surrogate Ensemble Search
 
-### [Paper](https://arxiv.org/abs/2208.03610) | [Code](https://github.com/CSIPlab/BASES) 
+### [Paper](https://arxiv.org/abs/2208.03610) | [Code](https://github.com/CSIPlab/BASES) | [Poster](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-poster.pdf) | [Slides](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-sldies.pdf)
 Pytorch implementation of *Blackbox Attacks via Surrogate Ensemble Search* in NeurIPS 2022.
 
 [Blackbox Attacks via Surrogate Ensemble Search](https://arxiv.org/abs/2208.03610)  
@@ -42,13 +42,13 @@ python learn_w_wb.py
 ```
 
 ### Google cloud vision API
-*gcv_images.zip* contains randomly selected images and responses from GCV
+[*gcv_images.zip*](https://github.com/CSIPlab/BASES/raw/main/imagenet1000.zip) contains randomly selected images and responses from GCV
 
 ```
 python gcv_attack.py
 ```
 
 ### Comparison with other methods
-Go to *comparison* folder for more details
+Go to [*comparison*](https://github.com/CSIPlab/BASES/tree/main/comparison) folder for more details
 
 
