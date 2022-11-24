@@ -1,6 +1,6 @@
 # BASES: Blackbox Attacks via Surrogate Ensemble Search
 
-### [Paper](https://arxiv.org/abs/2208.03610) | [Code](https://github.com/CSIPlab/BASES) | [Poster](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-poster.pdf) | [Slides](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-sldies.pdf)
+### [Paper](https://arxiv.org/abs/2208.03610) | [Code](https://github.com/CSIPlab/BASES) | [Poster](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-poster.pdf) | [Slides](https://github.com/CSIPlab/BASES/blob/main/doc/BASES-slides.pdf)
 Pytorch implementation of *Blackbox Attacks via Surrogate Ensemble Search* in NeurIPS 2022.
 
 [Blackbox Attacks via Surrogate Ensemble Search](https://arxiv.org/abs/2208.03610)  
