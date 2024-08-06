@@ -36,31 +36,23 @@ class Normalise(torch.nn.Module):
 # Only intended for use on untargeted attacks.
 def margin_loss(logits, y):
     class_org = y.item()
-    class_tgt = (logits - torch.eye(1000)[y].to(logits.device) * float('inf')).argmax(1, keepdim=True).item()
+    num_classes = logits.size(1)
+    cover_orig_logit = torch.zeros(1, num_classes).to(logits.device)
+    cover_orig_logit[0, y] = float('inf')
+    class_tgt = (logits - cover_orig_logit).argmax(1, keepdim=True).item()
     logit_org = logits[0, class_org]
     logit_target = logits[0, class_tgt]
     loss = -logit_org + logit_target
     return loss, class_org, class_tgt
 
 
-def margin_loss_v2(logits, y):
-    class_org = y.item()
-    class_tgt = (logits - torch.eye(1000)[y].to(logits.device) * float('inf')).argmax(1, keepdim=True).item()
-    logit_org = logits[0, class_org]
-    logit_target = logits[0, class_tgt]
-    loss = -logit_org + logit_target
-    return loss
-
-
 def generate_data_transform(transform_type):
     if transform_type == 'imagenet_common_224':
         image_width = 224
         data_transform = transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(image_width),
             transforms.ToTensor()])
-        # data_transform = transforms.Compose([
-        #     transforms.Resize(256),
-        #     transforms.CenterCrop(image_width),
-        #     transforms.ToTensor()])
     elif transform_type == 'imagenet_inception_299':
         image_width = 299
         data_transform = transforms.Compose([
